@@ -1,0 +1,3005 @@
+{
+	"formatVersion": 3,
+	"modifications": [
+		{
+			"modification": "createEnum",
+			"enumName": "ButtonTypes",
+			"values": [
+				"primary",
+				"secondary"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "ContentReferenceType",
+			"values": [
+				"link",
+				"heroSection",
+				"logosSection",
+				"contentSection",
+				"featureSection",
+				"ctaSection",
+				"testimonialSection",
+				"contactSection",
+				"productSection",
+				"image"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "FormInputType",
+			"values": [
+				"shortAnswer",
+				"paragraph",
+				"multipeChoice",
+				"checkBoxes",
+				"dropDown",
+				"fileUpload",
+				"date",
+				"dateTime"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "LinkEnum",
+			"values": [
+				"url",
+				"article",
+				"page"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "MenuPositions",
+			"values": [
+				"header",
+				"footer"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "PageTypeEnum",
+			"values": [
+				"homePage",
+				"blogPage",
+				"error404Page"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "SettingUnique",
+			"values": [
+				"One"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "SlotType",
+			"values": [
+				"morning",
+				"afternoon"
+			]
+		},
+		{
+			"modification": "createEnum",
+			"enumName": "UserRole",
+			"values": [
+				"admin",
+				"b2b",
+				"user"
+			]
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Button",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "button"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Content",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentPart",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_part"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentReference",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_reference"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentImage",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_image"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentButton",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_button"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentFeatureItem",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_feature_item"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentTestimonial",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_testimonial"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "TestimonialAuthor",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "testimonial_author"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ContentBlogPost",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "content_blog_post"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "File",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "file"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Form",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "form"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "FormInput",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "form_input"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "FormOption",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "form_option"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Image",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "image"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Link",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "link"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Menu",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "menu"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "MenuItem",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "menu_item"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Page",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "page"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Response",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "response"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "ResponseAnswer",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "response_answer"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Seo",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "seo"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Setting",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "setting"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "Slot",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "slot"
+			}
+		},
+		{
+			"modification": "createEntity",
+			"entity": {
+				"name": "User",
+				"primary": "id",
+				"primaryColumn": "id",
+				"unique": {},
+				"fields": {
+					"id": {
+						"name": "id",
+						"columnName": "id",
+						"nullable": false,
+						"type": "Uuid",
+						"columnType": "uuid"
+					}
+				},
+				"tableName": "user"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Button",
+			"field": {
+				"name": "label",
+				"columnName": "label",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Button",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": false,
+				"default": "primary",
+				"type": "Enum",
+				"columnType": "ButtonTypes"
+			},
+			"fillValue": "primary"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentPart",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentPart",
+			"field": {
+				"name": "json",
+				"columnName": "json",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentReference",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": false,
+				"type": "Enum",
+				"columnType": "ContentReferenceType"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentReference",
+			"field": {
+				"name": "primaryText",
+				"columnName": "primary_text",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentReference",
+			"field": {
+				"name": "secondaryText",
+				"columnName": "secondary_text",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentImage",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentButton",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentFeatureItem",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentFeatureItem",
+			"field": {
+				"name": "primaryText",
+				"columnName": "primary_text",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentTestimonial",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "TestimonialAuthor",
+			"field": {
+				"name": "name",
+				"columnName": "name",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "TestimonialAuthor",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ContentBlogPost",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "url",
+				"columnName": "url",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "size",
+				"columnName": "size",
+				"nullable": true,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "File",
+			"field": {
+				"name": "alt",
+				"columnName": "alt",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Form",
+			"field": {
+				"name": "publishAt",
+				"columnName": "publish_at",
+				"nullable": true,
+				"default": "now",
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			},
+			"fillValue": "now"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Form",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Form",
+			"field": {
+				"name": "slug",
+				"columnName": "slug",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": false,
+				"type": "Enum",
+				"columnType": "FormInputType"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "question",
+				"columnName": "question",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "placeholder",
+				"columnName": "placeholder",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "date",
+				"columnName": "date",
+				"nullable": true,
+				"type": "Date",
+				"columnType": "date"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "dateTime",
+				"columnName": "date_time",
+				"nullable": true,
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormInput",
+			"field": {
+				"name": "required",
+				"columnName": "required",
+				"nullable": false,
+				"default": false,
+				"type": "Bool",
+				"columnType": "boolean"
+			},
+			"fillValue": false
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormOption",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "FormOption",
+			"field": {
+				"name": "value",
+				"columnName": "value",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Image",
+			"field": {
+				"name": "url",
+				"columnName": "url",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Image",
+			"field": {
+				"name": "width",
+				"columnName": "width",
+				"nullable": true,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Image",
+			"field": {
+				"name": "height",
+				"columnName": "height",
+				"nullable": true,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Image",
+			"field": {
+				"name": "size",
+				"columnName": "size",
+				"nullable": true,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Image",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Image",
+			"field": {
+				"name": "alt",
+				"columnName": "alt",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Link",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": false,
+				"type": "Enum",
+				"columnType": "LinkEnum"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Link",
+			"field": {
+				"name": "url",
+				"columnName": "url",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Menu",
+			"field": {
+				"name": "position",
+				"columnName": "position",
+				"nullable": false,
+				"type": "Enum",
+				"columnType": "MenuPositions"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "MenuItem",
+			"field": {
+				"name": "order",
+				"columnName": "order",
+				"nullable": false,
+				"type": "Integer",
+				"columnType": "integer"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "MenuItem",
+			"field": {
+				"name": "label",
+				"columnName": "label",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "publishAt",
+				"columnName": "publish_at",
+				"nullable": true,
+				"default": "now",
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			},
+			"fillValue": "now"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "slug",
+				"columnName": "slug",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "role",
+				"columnName": "role",
+				"nullable": true,
+				"type": "Enum",
+				"columnType": "PageTypeEnum"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Page",
+			"field": {
+				"name": "description",
+				"columnName": "description",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Response",
+			"field": {
+				"name": "createdAt",
+				"columnName": "created_at",
+				"nullable": false,
+				"default": "now",
+				"type": "DateTime",
+				"columnType": "timestamptz"
+			},
+			"fillValue": "now"
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "ResponseAnswer",
+			"field": {
+				"name": "value",
+				"columnName": "value",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Seo",
+			"field": {
+				"name": "title",
+				"columnName": "title",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Seo",
+			"field": {
+				"name": "description",
+				"columnName": "description",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Seo",
+			"field": {
+				"name": "ogTitle",
+				"columnName": "og_title",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Seo",
+			"field": {
+				"name": "ogDescription",
+				"columnName": "og_description",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Setting",
+			"field": {
+				"name": "unique",
+				"columnName": "unique",
+				"nullable": false,
+				"type": "Enum",
+				"columnType": "SettingUnique"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Slot",
+			"field": {
+				"name": "day",
+				"columnName": "day",
+				"nullable": false,
+				"type": "Date",
+				"columnType": "date"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "Slot",
+			"field": {
+				"name": "type",
+				"columnName": "type",
+				"nullable": false,
+				"type": "Enum",
+				"columnType": "SlotType"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "email",
+				"columnName": "email",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "identityId",
+				"columnName": "identity_id",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "firstName",
+				"columnName": "first_name",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "lastName",
+				"columnName": "last_name",
+				"nullable": false,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "welcomeMessage",
+				"columnName": "welcome_message",
+				"nullable": true,
+				"type": "String",
+				"columnType": "text"
+			}
+		},
+		{
+			"modification": "createColumn",
+			"entityName": "User",
+			"field": {
+				"name": "role",
+				"columnName": "role",
+				"nullable": false,
+				"default": "user",
+				"type": "Enum",
+				"columnType": "UserRole"
+			},
+			"fillValue": "user"
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Button",
+			"owningSide": {
+				"name": "target",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "Link",
+				"joiningColumn": {
+					"columnName": "target_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentPart",
+			"owningSide": {
+				"name": "content",
+				"inversedBy": "parts",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "Content",
+				"joiningColumn": {
+					"columnName": "content_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "parts",
+				"ownedBy": "content",
+				"type": "OneHasMany",
+				"target": "ContentPart",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentReference",
+			"owningSide": {
+				"name": "contentPart",
+				"inversedBy": "references",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "ContentPart",
+				"joiningColumn": {
+					"columnName": "content_part_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "references",
+				"ownedBy": "contentPart",
+				"type": "OneHasMany",
+				"target": "ContentReference"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentReference",
+			"owningSide": {
+				"name": "target",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "Link",
+				"joiningColumn": {
+					"columnName": "target_id",
+					"onDelete": "set null"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentReference",
+			"owningSide": {
+				"name": "image",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "image_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentImage",
+			"owningSide": {
+				"name": "image",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "image_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentImage",
+			"owningSide": {
+				"name": "contentReference",
+				"inversedBy": "images",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "ContentReference",
+				"joiningColumn": {
+					"columnName": "content_reference_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "images",
+				"ownedBy": "contentReference",
+				"type": "OneHasMany",
+				"target": "ContentImage",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentButton",
+			"owningSide": {
+				"name": "button",
+				"nullable": false,
+				"type": "OneHasOne",
+				"target": "Button",
+				"joiningColumn": {
+					"columnName": "button_id",
+					"onDelete": "restrict"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentButton",
+			"owningSide": {
+				"name": "contentReference",
+				"inversedBy": "buttons",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "ContentReference",
+				"joiningColumn": {
+					"columnName": "content_reference_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "buttons",
+				"ownedBy": "contentReference",
+				"type": "OneHasMany",
+				"target": "ContentButton",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentFeatureItem",
+			"owningSide": {
+				"name": "icon",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "icon_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentFeatureItem",
+			"owningSide": {
+				"name": "contentReference",
+				"inversedBy": "featureList",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "ContentReference",
+				"joiningColumn": {
+					"columnName": "content_reference_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "featureList",
+				"ownedBy": "contentReference",
+				"type": "OneHasMany",
+				"target": "ContentFeatureItem",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentTestimonial",
+			"owningSide": {
+				"name": "author",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "TestimonialAuthor",
+				"joiningColumn": {
+					"columnName": "author_id",
+					"onDelete": "set null"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentTestimonial",
+			"owningSide": {
+				"name": "contentReference",
+				"inversedBy": "testimonials",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "ContentReference",
+				"joiningColumn": {
+					"columnName": "content_reference_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "testimonials",
+				"ownedBy": "contentReference",
+				"type": "OneHasMany",
+				"target": "ContentTestimonial",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "TestimonialAuthor",
+			"owningSide": {
+				"name": "image",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "image_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ContentBlogPost",
+			"owningSide": {
+				"name": "contentReference",
+				"inversedBy": "blogPosts",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "ContentReference",
+				"joiningColumn": {
+					"columnName": "content_reference_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "blogPosts",
+				"ownedBy": "contentReference",
+				"type": "OneHasMany",
+				"target": "ContentBlogPost",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Form",
+			"owningSide": {
+				"name": "content",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "Content",
+				"joiningColumn": {
+					"columnName": "content_id",
+					"onDelete": "set null"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "FormInput",
+			"owningSide": {
+				"name": "form",
+				"inversedBy": "inputs",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "Form",
+				"joiningColumn": {
+					"columnName": "form_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "inputs",
+				"ownedBy": "form",
+				"type": "OneHasMany",
+				"target": "FormInput",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "FormInput",
+			"owningSide": {
+				"name": "file",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "File",
+				"joiningColumn": {
+					"columnName": "file_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "FormOption",
+			"owningSide": {
+				"name": "formInput",
+				"inversedBy": "options",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "FormInput",
+				"joiningColumn": {
+					"columnName": "form_input_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "options",
+				"ownedBy": "formInput",
+				"type": "OneHasMany",
+				"target": "FormOption",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Link",
+			"owningSide": {
+				"name": "page",
+				"inversedBy": "linkedFrom",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Page",
+				"joiningColumn": {
+					"columnName": "page_id",
+					"onDelete": "set null"
+				}
+			},
+			"inverseSide": {
+				"name": "linkedFrom",
+				"ownedBy": "page",
+				"type": "OneHasMany",
+				"target": "Link"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "MenuItem",
+			"owningSide": {
+				"name": "url",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "Link",
+				"joiningColumn": {
+					"columnName": "url_id",
+					"onDelete": "set null"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "MenuItem",
+			"owningSide": {
+				"name": "menu",
+				"inversedBy": "items",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "Menu",
+				"joiningColumn": {
+					"columnName": "menu_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "items",
+				"ownedBy": "menu",
+				"type": "OneHasMany",
+				"target": "MenuItem",
+				"orderBy": [
+					{
+						"path": [
+							"order"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Page",
+			"owningSide": {
+				"name": "image",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "image_id",
+					"onDelete": "restrict"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Page",
+			"owningSide": {
+				"name": "content",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "Content",
+				"joiningColumn": {
+					"columnName": "content_id",
+					"onDelete": "set null"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Page",
+			"owningSide": {
+				"name": "seo",
+				"inversedBy": "page",
+				"nullable": false,
+				"type": "OneHasOne",
+				"target": "Seo",
+				"joiningColumn": {
+					"columnName": "seo_id",
+					"onDelete": "restrict"
+				},
+				"orphanRemoval": true
+			},
+			"inverseSide": {
+				"name": "page",
+				"ownedBy": "seo",
+				"target": "Page",
+				"type": "OneHasOne",
+				"nullable": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Response",
+			"owningSide": {
+				"name": "form",
+				"inversedBy": "responses",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "Form",
+				"joiningColumn": {
+					"columnName": "form_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "responses",
+				"ownedBy": "form",
+				"type": "OneHasMany",
+				"target": "Response"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ResponseAnswer",
+			"owningSide": {
+				"name": "input",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "FormInput",
+				"joiningColumn": {
+					"columnName": "input_id",
+					"onDelete": "restrict"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "ResponseAnswer",
+			"owningSide": {
+				"name": "response",
+				"inversedBy": "answers",
+				"nullable": false,
+				"type": "ManyHasOne",
+				"target": "Response",
+				"joiningColumn": {
+					"columnName": "response_id",
+					"onDelete": "cascade"
+				}
+			},
+			"inverseSide": {
+				"name": "answers",
+				"ownedBy": "response",
+				"type": "OneHasMany",
+				"target": "ResponseAnswer"
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Seo",
+			"owningSide": {
+				"name": "ogImage",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "og_image_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Setting",
+			"owningSide": {
+				"name": "logo",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "Image",
+				"joiningColumn": {
+					"columnName": "logo_id",
+					"onDelete": "set null"
+				}
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Setting",
+			"owningSide": {
+				"name": "footerCopyright",
+				"nullable": true,
+				"type": "OneHasOne",
+				"target": "Content",
+				"joiningColumn": {
+					"columnName": "footer_copyright_id",
+					"onDelete": "set null"
+				},
+				"orphanRemoval": true
+			}
+		},
+		{
+			"modification": "createRelation",
+			"entityName": "Slot",
+			"owningSide": {
+				"name": "user",
+				"inversedBy": "slots",
+				"nullable": true,
+				"type": "ManyHasOne",
+				"target": "User",
+				"joiningColumn": {
+					"columnName": "user_id",
+					"onDelete": "set null"
+				}
+			},
+			"inverseSide": {
+				"name": "slots",
+				"ownedBy": "user",
+				"type": "OneHasMany",
+				"target": "Slot",
+				"orderBy": [
+					{
+						"path": [
+							"day"
+						],
+						"direction": "asc"
+					}
+				]
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Form",
+			"unique": {
+				"fields": [
+					"slug"
+				],
+				"name": "unique_Form_slug_e3207a"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Menu",
+			"unique": {
+				"fields": [
+					"position"
+				],
+				"name": "unique_Menu_position_33b263"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Page",
+			"unique": {
+				"fields": [
+					"slug"
+				],
+				"name": "unique_Page_slug_875597"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Page",
+			"unique": {
+				"fields": [
+					"role"
+				],
+				"name": "unique_Page_role_4cbe4c"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "ResponseAnswer",
+			"unique": {
+				"name": "unique_ResponseAnswer_input_response_7d7d89",
+				"fields": [
+					"input",
+					"response"
+				]
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "Setting",
+			"unique": {
+				"fields": [
+					"unique"
+				],
+				"name": "unique_Setting_unique_be242d"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "User",
+			"unique": {
+				"fields": [
+					"email"
+				],
+				"name": "unique_User_email_c3abc8"
+			}
+		},
+		{
+			"modification": "createUniqueConstraint",
+			"entityName": "User",
+			"unique": {
+				"fields": [
+					"identityId"
+				],
+				"name": "unique_User_identityId_ff88a1"
+			}
+		},
+		{
+			"modification": "patchAclSchema",
+			"patch": [
+				{
+					"op": "add",
+					"path": "/roles/admin",
+					"value": {
+						"variables": {},
+						"stages": "*",
+						"entities": {
+							"Button": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"label": true,
+										"target": true,
+										"type": true
+									},
+									"read": {
+										"id": true,
+										"label": true,
+										"target": true,
+										"type": true
+									},
+									"update": {
+										"id": true,
+										"label": true,
+										"target": true,
+										"type": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Content": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"parts": true
+									},
+									"read": {
+										"id": true,
+										"parts": true
+									},
+									"update": {
+										"id": true,
+										"parts": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentPart": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"content": true,
+										"json": true,
+										"references": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"content": true,
+										"json": true,
+										"references": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"content": true,
+										"json": true,
+										"references": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentReference": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"contentPart": true,
+										"type": true,
+										"target": true,
+										"primaryText": true,
+										"secondaryText": true,
+										"image": true,
+										"images": true,
+										"buttons": true,
+										"featureList": true,
+										"testimonials": true,
+										"blogPosts": true
+									},
+									"read": {
+										"id": true,
+										"contentPart": true,
+										"type": true,
+										"target": true,
+										"primaryText": true,
+										"secondaryText": true,
+										"image": true,
+										"images": true,
+										"buttons": true,
+										"featureList": true,
+										"testimonials": true,
+										"blogPosts": true
+									},
+									"update": {
+										"id": true,
+										"contentPart": true,
+										"type": true,
+										"target": true,
+										"primaryText": true,
+										"secondaryText": true,
+										"image": true,
+										"images": true,
+										"buttons": true,
+										"featureList": true,
+										"testimonials": true,
+										"blogPosts": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentImage": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"image": true,
+										"contentReference": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"image": true,
+										"contentReference": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"image": true,
+										"contentReference": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentButton": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"button": true,
+										"contentReference": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"button": true,
+										"contentReference": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"button": true,
+										"contentReference": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentFeatureItem": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"primaryText": true,
+										"icon": true,
+										"contentReference": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"primaryText": true,
+										"icon": true,
+										"contentReference": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"primaryText": true,
+										"icon": true,
+										"contentReference": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentTestimonial": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"author": true,
+										"contentReference": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"author": true,
+										"contentReference": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"author": true,
+										"contentReference": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"TestimonialAuthor": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"name": true,
+										"title": true,
+										"image": true
+									},
+									"read": {
+										"id": true,
+										"name": true,
+										"title": true,
+										"image": true
+									},
+									"update": {
+										"id": true,
+										"name": true,
+										"title": true,
+										"image": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ContentBlogPost": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"contentReference": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"contentReference": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"contentReference": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"File": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"url": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									},
+									"read": {
+										"id": true,
+										"url": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									},
+									"update": {
+										"id": true,
+										"url": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Form": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"publishAt": true,
+										"title": true,
+										"slug": true,
+										"content": true,
+										"inputs": true,
+										"responses": true
+									},
+									"read": {
+										"id": true,
+										"publishAt": true,
+										"title": true,
+										"slug": true,
+										"content": true,
+										"inputs": true,
+										"responses": true
+									},
+									"update": {
+										"id": true,
+										"publishAt": true,
+										"title": true,
+										"slug": true,
+										"content": true,
+										"inputs": true,
+										"responses": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"FormInput": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"type": true,
+										"form": true,
+										"question": true,
+										"placeholder": true,
+										"options": true,
+										"file": true,
+										"date": true,
+										"dateTime": true,
+										"required": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"type": true,
+										"form": true,
+										"question": true,
+										"placeholder": true,
+										"options": true,
+										"file": true,
+										"date": true,
+										"dateTime": true,
+										"required": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"type": true,
+										"form": true,
+										"question": true,
+										"placeholder": true,
+										"options": true,
+										"file": true,
+										"date": true,
+										"dateTime": true,
+										"required": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"FormOption": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"value": true,
+										"formInput": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"value": true,
+										"formInput": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"value": true,
+										"formInput": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Image": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"url": true,
+										"width": true,
+										"height": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									},
+									"read": {
+										"id": true,
+										"url": true,
+										"width": true,
+										"height": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									},
+									"update": {
+										"id": true,
+										"url": true,
+										"width": true,
+										"height": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Link": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"type": true,
+										"url": true,
+										"page": true
+									},
+									"read": {
+										"id": true,
+										"type": true,
+										"url": true,
+										"page": true
+									},
+									"update": {
+										"id": true,
+										"type": true,
+										"url": true,
+										"page": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Menu": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"position": true,
+										"items": true
+									},
+									"read": {
+										"id": true,
+										"position": true,
+										"items": true
+									},
+									"update": {
+										"id": true,
+										"position": true,
+										"items": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"MenuItem": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"order": true,
+										"label": true,
+										"url": true,
+										"menu": true
+									},
+									"read": {
+										"id": true,
+										"order": true,
+										"label": true,
+										"url": true,
+										"menu": true
+									},
+									"update": {
+										"id": true,
+										"order": true,
+										"label": true,
+										"url": true,
+										"menu": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Page": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"publishAt": true,
+										"slug": true,
+										"role": true,
+										"linkedFrom": true,
+										"title": true,
+										"description": true,
+										"image": true,
+										"content": true,
+										"seo": true
+									},
+									"read": {
+										"id": true,
+										"publishAt": true,
+										"slug": true,
+										"role": true,
+										"linkedFrom": true,
+										"title": true,
+										"description": true,
+										"image": true,
+										"content": true,
+										"seo": true
+									},
+									"update": {
+										"id": true,
+										"publishAt": true,
+										"slug": true,
+										"role": true,
+										"linkedFrom": true,
+										"title": true,
+										"description": true,
+										"image": true,
+										"content": true,
+										"seo": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Response": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"form": true,
+										"answers": true,
+										"createdAt": true
+									},
+									"read": {
+										"id": true,
+										"form": true,
+										"answers": true,
+										"createdAt": true
+									},
+									"update": {
+										"id": true,
+										"form": true,
+										"answers": true,
+										"createdAt": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"ResponseAnswer": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"value": true,
+										"input": true,
+										"response": true
+									},
+									"read": {
+										"id": true,
+										"value": true,
+										"input": true,
+										"response": true
+									},
+									"update": {
+										"id": true,
+										"value": true,
+										"input": true,
+										"response": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Seo": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"title": true,
+										"description": true,
+										"ogTitle": true,
+										"ogDescription": true,
+										"ogImage": true,
+										"page": true
+									},
+									"read": {
+										"id": true,
+										"title": true,
+										"description": true,
+										"ogTitle": true,
+										"ogDescription": true,
+										"ogImage": true,
+										"page": true
+									},
+									"update": {
+										"id": true,
+										"title": true,
+										"description": true,
+										"ogTitle": true,
+										"ogDescription": true,
+										"ogImage": true,
+										"page": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Setting": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"unique": true,
+										"logo": true,
+										"footerCopyright": true
+									},
+									"read": {
+										"id": true,
+										"unique": true,
+										"logo": true,
+										"footerCopyright": true
+									},
+									"update": {
+										"id": true,
+										"unique": true,
+										"logo": true,
+										"footerCopyright": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"Slot": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"day": true,
+										"type": true,
+										"user": true
+									},
+									"read": {
+										"id": true,
+										"day": true,
+										"type": true,
+										"user": true
+									},
+									"update": {
+										"id": true,
+										"day": true,
+										"type": true,
+										"user": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							},
+							"User": {
+								"predicates": {},
+								"operations": {
+									"create": {
+										"id": true,
+										"email": true,
+										"identityId": true,
+										"firstName": true,
+										"lastName": true,
+										"welcomeMessage": true,
+										"role": true,
+										"slots": true
+									},
+									"read": {
+										"id": true,
+										"email": true,
+										"identityId": true,
+										"firstName": true,
+										"lastName": true,
+										"welcomeMessage": true,
+										"role": true,
+										"slots": true
+									},
+									"update": {
+										"id": true,
+										"email": true,
+										"identityId": true,
+										"firstName": true,
+										"lastName": true,
+										"welcomeMessage": true,
+										"role": true,
+										"slots": true
+									},
+									"delete": true,
+									"customPrimary": true
+								}
+							}
+						},
+						"s3": {
+							"**": {
+								"upload": true,
+								"read": true
+							}
+						}
+					}
+				},
+				{
+					"op": "add",
+					"path": "/roles/public",
+					"value": {
+						"variables": {},
+						"stages": "*",
+						"s3": {
+							"**": {
+								"upload": false,
+								"read": true
+							}
+						},
+						"entities": {
+							"Button": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"label": true,
+										"target": true,
+										"type": true
+									}
+								}
+							},
+							"Content": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"parts": true
+									}
+								}
+							},
+							"ContentPart": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"order": true,
+										"content": true,
+										"json": true,
+										"references": true
+									}
+								}
+							},
+							"ContentReference": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"contentPart": true,
+										"type": true,
+										"target": true,
+										"primaryText": true,
+										"secondaryText": true,
+										"image": true,
+										"images": true,
+										"buttons": true,
+										"featureList": true,
+										"testimonials": true,
+										"blogPosts": true
+									}
+								}
+							},
+							"Image": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"url": true,
+										"width": true,
+										"height": true,
+										"size": true,
+										"type": true,
+										"alt": true
+									}
+								}
+							},
+							"Link": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"type": true,
+										"url": true,
+										"page": true
+									}
+								}
+							},
+							"Menu": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"position": true,
+										"items": true
+									}
+								}
+							},
+							"MenuItem": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"order": true,
+										"label": true,
+										"url": true,
+										"menu": true
+									}
+								}
+							},
+							"Page": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"publishAt": true,
+										"slug": true,
+										"role": true,
+										"linkedFrom": true,
+										"title": true,
+										"description": true,
+										"image": true,
+										"content": true,
+										"seo": true
+									}
+								}
+							},
+							"Seo": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"title": true,
+										"description": true,
+										"ogTitle": true,
+										"ogDescription": true,
+										"ogImage": true,
+										"page": true
+									}
+								}
+							},
+							"Setting": {
+								"predicates": {},
+								"operations": {
+									"read": {
+										"id": true,
+										"unique": true,
+										"logo": true,
+										"footerCopyright": true
+									}
+								}
+							}
+						}
+					}
+				},
+				{
+					"op": "add",
+					"path": "/roles/user",
+					"value": {
+						"variables": {
+							"identityId": {
+								"type": "predefined",
+								"value": "identityID"
+							}
+						},
+						"inherits": [
+							"public"
+						],
+						"stages": "*",
+						"s3": {
+							"**": {
+								"upload": false,
+								"read": true
+							}
+						},
+						"entities": {}
+					}
+				},
+				{
+					"op": "add",
+					"path": "/roles/b2b",
+					"value": {
+						"variables": {
+							"identityId": {
+								"type": "predefined",
+								"value": "identityID"
+							}
+						},
+						"inherits": [
+							"public"
+						],
+						"stages": "*",
+						"s3": {
+							"**": {
+								"upload": false,
+								"read": true
+							}
+						},
+						"entities": {
+							"User": {
+								"predicates": {
+									"isMe": {
+										"identityId": "identityId"
+									}
+								},
+								"operations": {
+									"read": {
+										"id": true,
+										"email": "isMe",
+										"identityId": "isMe",
+										"firstName": "isMe",
+										"lastName": "isMe",
+										"welcomeMessage": "isMe",
+										"role": "isMe",
+										"slots": "isMe"
+									},
+									"update": {
+										"firstName": "isMe",
+										"lastName": "isMe",
+										"slots": "isMe"
+									}
+								}
+							},
+							"Slot": {
+								"predicates": {
+									"self": {
+										"user": {
+											"identityId": "identityId"
+										}
+									},
+									"selfOrNull": {
+										"or": [
+											{
+												"user": {
+													"identityId": "identityId"
+												}
+											},
+											{
+												"user": {
+													"id": {
+														"isNull": true
+													}
+												}
+											}
+										]
+									}
+								},
+								"operations": {
+									"create": {
+										"id": "self",
+										"day": "self",
+										"type": "self",
+										"user": "self"
+									},
+									"read": {
+										"id": true,
+										"day": true,
+										"type": true,
+										"user": true
+									},
+									"update": {
+										"id": "selfOrNull",
+										"day": "selfOrNull",
+										"type": "selfOrNull",
+										"user": "selfOrNull"
+									}
+								}
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}

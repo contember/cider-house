@@ -1,0 +1,30 @@
+.cui-button-content .cui-icon {
+    top: -0.1em !important;
+}
+
+.cui-repeater-item-container-label .cui-label {
+    color: #888;
+    position: relative;
+    top: -3px;
+}
+
+.fileInput-cta .cui-button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.cui-repeater-item-container.is-active {
+    z-index: 1;
+}
+
+.cui-field-container {
+    min-width: var(--cui-field-container-min-width);
+}
+
+.cui-field-container.view-large {
+    min-width: 19em;
+}
+
+.cui-layout-chrome-bar-header-inner {
+    width: 100%;
+}

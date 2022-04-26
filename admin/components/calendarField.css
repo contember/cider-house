@@ -1,0 +1,14 @@
+.text {
+	color: var(--cui-color--strong);
+	font-size: 120%;
+}
+
+.green .cui-field-container-body-content > div > div:first-of-type {
+	background-color: hsl(85, 60%, 85%);
+}
+
+@media (prefers-color-scheme: dark) {
+	.green .cui-field-container-body-content > div > div:first-of-type {
+		 background-color: hsl(85, 60%, 10%);
+	}
+}
