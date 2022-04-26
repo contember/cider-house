@@ -15,9 +15,6 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build project
-      run: npm run build
-
     - name: Deploy Contember to production
-      run: npm run contember deploy ${{ secrets.CONTEMBER_DSN }} -- --yes
+      run: npm run deploy ${{ secrets.CONTEMBER_DSN }} -- --yes
       
